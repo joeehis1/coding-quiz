@@ -1,0 +1,43 @@
+@use "./variables" as *;
+
+header {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+// highscore toggle button
+
+.btn-score-toggle {
+    background-color: transparent;
+    // text-decoration: underline;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 3rem;
+        border-radius: 50%;
+        bottom: 0;
+        background-color: $color-accent;
+        z-index: -1;
+        transform: translateY(0px);
+    }
+    &:hover {
+        background-color: transparent;
+        color: initial;
+        &::after {
+            animation: bounce 500ms ease infinite alternate-reverse both;
+        }
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(6px);
+    }
+}
