@@ -1,3 +1,54 @@
+@use "./variables" as *;
+
 body {
-    background-color: #ffffff;
+    background-color: $body-bg;
+    font-family: $font-family-sans-serif-primary;
+    color: $color-primary;
+}
+
+// Utility classes/styles used throughout application
+
+h1,
+h2,
+h3 {
+    font-family: $font-family-sans-serif-secondary;
+    color: $color-dark;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin: 0;
+}
+
+.unstyled-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    display: block;
+    background-color: $color-accent;
+    border: none;
+    padding-block: 0.5rem;
+    font-family: inherit;
+    font-weight: 700;
+    color: $color-dark;
+    font-family: $font-family-sans-serif-secondary;
+    text-transform: capitalize;
+    &:hover {
+        background-color: $color-dark;
+        color: $color-white;
+    }
+}
+
+section {
+    // &[data-shown="true"] {
+    //     display: block;
+    // }
+    // &[data-shown="false"] {
+    //     display: none;
+    // }
 }
