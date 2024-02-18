@@ -44,11 +44,17 @@ button {
     }
 }
 
+.container {
+    max-width: 1040px;
+    width: 85%;
+    margin: 0 auto;
+}
+
 section {
-    // &[data-shown="true"] {
-    //     display: block;
-    // }
-    // &[data-shown="false"] {
-    //     display: none;
-    // }
+    &[data-shown="true"] {
+        display: block;
+    }
+    &[data-shown="false"] {
+        display: none;
+    }
 }

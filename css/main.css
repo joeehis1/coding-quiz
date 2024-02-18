@@ -93,4 +93,62 @@ button:hover {
   color: #ffffff;
 }
 
+.container {
+  max-width: 1040px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+section[data-shown=true] {
+  display: block;
+}
+section[data-shown=false] {
+  display: none;
+}
+
+header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-score-toggle {
+  background-color: transparent;
+  position: relative;
+}
+.btn-score-toggle::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 3rem;
+  border-radius: 50%;
+  bottom: 0;
+  background-color: #cce8e5;
+  z-index: -1;
+  transform: translateY(0px);
+}
+.btn-score-toggle:hover {
+  background-color: transparent;
+  color: initial;
+}
+.btn-score-toggle:hover::after {
+  animation: bounce 500ms ease infinite alternate-reverse both;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(6px);
+  }
+}
+.intro-section {
+  text-align: center;
+}
+.intro-section button {
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=main.css.map */
