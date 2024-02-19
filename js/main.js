@@ -142,19 +142,21 @@ async function setAnswered(id, option) {
 async function playSound(answeredCorrectly) {
     const audio = new Audio();
     if (answeredCorrectly) {
-        audio.src = await getSound("../assets/correct.wav");
+        audio.src = "../assets/correct.wav";
     } else {
-        audio.src = await getSound("../assets/incorrect.wav");
+        audio.src = "../assets/incorrect.wav";
     }
     return audio.play();
 }
 
-async function getSound(localSource) {
-    const response = await fetch(localSource);
-    const blob = await response.blob();
-    const url = URL.createObjectURL(blob);
-    return url;
-}
+// Disabling this function for now. Might come in handy later on. This function was initially used to generate a url linking to the sound source however the url generated did not work the way it was supposed to, when deployed to a live site.
+
+// async function getSound(localSource) {
+//     const response = await fetch(localSource);
+//     const blob = await response.blob();
+//     const url = URL.createObjectURL(blob);
+//     return url;
+// }
 
 function delay(ms = 1500) {
     return new Promise((res) => {
