@@ -78,7 +78,6 @@ h1 {
 
 button {
   cursor: pointer;
-  display: block;
   background-color: #cce8e5;
   border: none;
   padding-block: 0.5rem;
@@ -92,11 +91,23 @@ button:hover {
   background-color: #323b3c;
   color: #ffffff;
 }
+button:disabled {
+  background-color: grey;
+  color: white;
+  cursor: not-allowed;
+}
 
 .container {
   max-width: 1040px;
   width: 85%;
   margin: 0 auto;
+}
+
+.vis-hidden {
+  visibility: none;
+  position: fixed;
+  top: 88000px;
+  left: 88000px;
 }
 
 section[data-shown=true] {
@@ -149,6 +160,31 @@ header {
 }
 .intro-section button {
   margin: 0 auto;
+}
+
+.quiz-list li {
+  margin-bottom: 0.5rem;
+}
+.quiz-list li[data-question-shown=true] {
+  display: block;
+}
+.quiz-list li[data-question-shown=false] {
+  display: none;
+}
+.quiz-list .result {
+  border-top: 1px solid #516163;
+  font-style: italic;
+}
+
+.scores-list li {
+  background-color: #cce8e5;
+  display: flex;
+  gap: 3.6rem;
+  padding-left: 0.8rem;
+  font-weight: 700;
+}
+.scores-list li + li {
+  margin-top: 0.4rem;
 }
 
 /*# sourceMappingURL=main.css.map */

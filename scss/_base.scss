@@ -29,7 +29,7 @@ h1 {
 
 button {
     cursor: pointer;
-    display: block;
+    // display: block;
     background-color: $color-accent;
     border: none;
     padding-block: 0.5rem;
@@ -42,12 +42,24 @@ button {
         background-color: $color-dark;
         color: $color-white;
     }
+    &:disabled {
+        background-color: grey;
+        color: white;
+        cursor: not-allowed;
+    }
 }
 
 .container {
     max-width: 1040px;
     width: 85%;
     margin: 0 auto;
+}
+
+.vis-hidden {
+    visibility: none;
+    position: fixed;
+    top: 88000px;
+    left: 88000px;
 }
 
 section {
