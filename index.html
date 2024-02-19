@@ -11,7 +11,7 @@
             <button class="btn-score-toggle">View Highscores</button>
             <p>Time:<span>22s</span></p>
         </header>
-        <section class="intro-section" data-shown="true">
+        <section class="intro-section" id="intro-section" data-shown="true">
             <div class="container">
                 <h1>Coding quiz challenge</h1>
                 <p>
@@ -19,100 +19,111 @@
                     the time limit. Keep in mind that incorrect answers will
                     penalize your score/time by ten seconds
                 </p>
-                <button>Start Quiz</button>
+                <button id="start-btn">Start Quiz</button>
             </div>
         </section>
-        <section class="quiz-section" data-shown="false">
-            <h2><strong>Quiz Started!!!</strong></h2>
-            <ul class="quiz-list unstyled-list">
-                <li>
-                    <h3>Commonly used data types DO NOT include:</h3>
-                    <ul class="quiz-options-list unstyled-list">
-                        <li><button>strings</button></li>
-                        <li><button>booleans</button></li>
-                        <li><button>alerts</button></li>
-                        <li><button>numbers</button></li>
-                    </ul>
-                    <div class="result">
-                        <audio src=""></audio>
-                        <p>Correct</p>
-                    </div>
-                </li>
-                <li>
-                    <h3>Commonly used data types DO NOT include:</h3>
-                    <ul class="quiz-options-list unstyled-list">
-                        <li><button>strings</button></li>
-                        <li><button>booleans</button></li>
-                        <li><button>alerts</button></li>
-                        <li><button>numbers</button></li>
-                    </ul>
-                    <div class="result">
-                        <audio src=""></audio>
-                        <p>Correct</p>
-                    </div>
-                </li>
-                <li>
-                    <h3>Commonly used data types DO NOT include:</h3>
-                    <ul class="quiz-options-list unstyled-list">
-                        <li><button>strings</button></li>
-                        <li><button>booleans</button></li>
-                        <li><button>alerts</button></li>
-                        <li><button>numbers</button></li>
-                    </ul>
-                    <div class="result">
-                        <audio src=""></audio>
-                        <p>Correct</p>
-                    </div>
-                </li>
-                <li>
-                    <h3>Commonly used data types DO NOT include:</h3>
-                    <ul class="quiz-options-list unstyled-list">
-                        <li><button>strings</button></li>
-                        <li><button>booleans</button></li>
-                        <li><button>alerts</button></li>
-                        <li><button>numbers</button></li>
-                    </ul>
-                    <div class="result">
-                        <audio src=""></audio>
-                        <p>Correct</p>
-                    </div>
-                </li>
-                <li>
-                    <h3>Commonly used data types DO NOT include:</h3>
-                    <ul class="quiz-options-list unstyled-list">
-                        <li><button>strings</button></li>
-                        <li><button>booleans</button></li>
-                        <li><button>alerts</button></li>
-                        <li><button>numbers</button></li>
-                    </ul>
-                    <div class="result">
-                        <audio src=""></audio>
-                        <p>Correct</p>
-                    </div>
-                </li>
-            </ul>
+        <section class="quiz-section" id="quiz-section" data-shown="false">
+            <div class="container">
+                <h2 class="vis-hidden"><strong>Quiz Started!!!</strong></h2>
+                <ul id="quiz-list" class="quiz-list unstyled-list">
+                    <!-- This is placeholder markup and can be safely deleted  -->
+                    <li>
+                        <h3>Commonly used data types DO NOT include:</h3>
+                        <ul class="quiz-options-list unstyled-list">
+                            <li><button>strings</button></li>
+                            <li><button>booleans</button></li>
+                            <li><button>alerts</button></li>
+                            <li><button>numbers</button></li>
+                        </ul>
+                        <div class="result">
+                            <audio src=""></audio>
+                            <p>Correct</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Commonly used data types DO NOT include:</h3>
+                        <ul class="quiz-options-list unstyled-list">
+                            <li><button>strings</button></li>
+                            <li><button>booleans</button></li>
+                            <li><button>alerts</button></li>
+                            <li><button>numbers</button></li>
+                        </ul>
+                        <div class="result">
+                            <audio src=""></audio>
+                            <p>Correct</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Commonly used data types DO NOT include:</h3>
+                        <ul class="quiz-options-list unstyled-list">
+                            <li><button>strings</button></li>
+                            <li><button>booleans</button></li>
+                            <li><button>alerts</button></li>
+                            <li><button>numbers</button></li>
+                        </ul>
+                        <div class="result">
+                            <audio src=""></audio>
+                            <p>Correct</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Commonly used data types DO NOT include:</h3>
+                        <ul class="quiz-options-list unstyled-list">
+                            <li><button>strings</button></li>
+                            <li><button>booleans</button></li>
+                            <li><button>alerts</button></li>
+                            <li><button>numbers</button></li>
+                        </ul>
+                        <div class="result">
+                            <audio src=""></audio>
+                            <p>Correct</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Commonly used data types DO NOT include:</h3>
+                        <ul class="quiz-options-list unstyled-list">
+                            <li><button>strings</button></li>
+                            <li><button>booleans</button></li>
+                            <li><button>alerts</button></li>
+                            <li><button>numbers</button></li>
+                        </ul>
+                        <div class="result">
+                            <audio src=""></audio>
+                            <p>Correct</p>
+                        </div>
+                    </li>
+                    <!-- This is placeholder markup and can be safely deleted -->
+                </ul>
+            </div>
         </section>
-        <section class="exit-section" data-shown="false">
-            <h2>All Done!!!</h2>
-            <p>Final Score: <span>80</span></p>
-            <form class="score-form">
-                <div class="form-control">
-                    <label for="user-initials-input"></label>
-                    <input
-                        name="user-initials"
-                        id="user-initials-input"
-                        type="text"
-                        required
-                    />
-                    <button>Submit</button>
-                </div>
-            </form>
+        <section id="exit-section" class="exit-section" data-shown="false">
+            <div class="container">
+                <h2>All Done!!!</h2>
+                <p>Final Score: <span id="final-score-elem">80</span></p>
+                <form id="score-form" class="score-form">
+                    <div class="form-control">
+                        <label for="user-initials-input"
+                            >Enter your initials:</label
+                        >
+                        <input
+                            name="user-initials"
+                            id="user-initials-input"
+                            type="text"
+                            required
+                        />
+                        <button>Submit</button>
+                    </div>
+                </form>
+            </div>
         </section>
-        <section class="scores" data-shown="false">
-            <h2>Highscores</h2>
-            <button>Go Back</button>
-            <button>Clear Highscores</button>
+        <section id="scores" class="scores" data-shown="false">
+            <div class="container">
+                <h2>High scores</h2>
+                <ul id="scores-list" class="scores-list unstyled-list"></ul>
+                <button id="back-btn">Go Back</button>
+                <button id="clear-btn">Clear Highscores</button>
+            </div>
         </section>
-        <script type="module" src="./js/questions.js"></script>
+        <script type="module" src="./js/main.js"></script>
     </body>
 </html>
