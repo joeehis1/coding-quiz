@@ -1,9 +1,11 @@
 @use "./variables" as *;
 
 header {
-    padding: 1.5rem;
-    display: flex;
-    justify-content: space-between;
+    .container {
+        padding-block: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 // highscore toggle button

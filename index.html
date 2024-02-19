@@ -8,8 +8,12 @@
     </head>
     <body>
         <header>
-            <button class="btn-score-toggle">View Highscores</button>
-            <p>Time:<span>22s</span></p>
+            <div class="container">
+                <button class="btn-score-toggle" id="show-scores">
+                    View Highscores
+                </button>
+                <p>Time:<span id="timer" data-duration="60">22</span>s</p>
+            </div>
         </header>
         <section class="intro-section" id="intro-section" data-shown="true">
             <div class="container">
@@ -98,7 +102,7 @@
         </section>
         <section id="exit-section" class="exit-section" data-shown="false">
             <div class="container">
-                <h2>All Done!!!</h2>
+                <h2 id="exit-text">All Done!!!</h2>
                 <p>Final Score: <span id="final-score-elem">80</span></p>
                 <form id="score-form" class="score-form">
                     <div class="form-control">
