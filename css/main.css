@@ -97,6 +97,10 @@ button:disabled {
   cursor: not-allowed;
 }
 
+label {
+  font-weight: 700;
+}
+
 .container {
   max-width: 1040px;
   width: 85%;
@@ -117,8 +121,8 @@ section[data-shown=false] {
   display: none;
 }
 
-header {
-  padding: 1.5rem;
+header .container {
+  padding-block: 1.5rem;
   display: flex;
   justify-content: space-between;
 }
