@@ -1,0 +1,14 @@
+@use "./variables" as *;
+
+.scores-list {
+    li {
+        background-color: $color-accent;
+        display: flex;
+        gap: 3.6rem;
+        padding-left: 0.8rem;
+        font-weight: 700;
+        + li {
+            margin-top: 0.4rem;
+        }
+    }
+}

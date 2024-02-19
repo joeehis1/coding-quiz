@@ -1,0 +1,22 @@
+@use "./variables" as *;
+
+.quiz-section {
+}
+
+.quiz-list {
+    li {
+        &[data-question-shown="true"] {
+            display: block;
+        }
+
+        &[data-question-shown="false"] {
+            display: none;
+        }
+        margin-bottom: 0.5rem;
+    }
+
+    .result {
+        border-top: 1px solid $color-primary;
+        font-style: italic;
+    }
+}
