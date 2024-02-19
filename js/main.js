@@ -142,9 +142,9 @@ async function setAnswered(id, option) {
 async function playSound(answeredCorrectly) {
     const audio = new Audio();
     if (answeredCorrectly) {
-        audio.src = await getSound("../assets/sounds/correct.wav");
+        audio.src = await getSound("../assets/correct.wav");
     } else {
-        audio.src = await getSound("../assets/sounds/incorrect.wav");
+        audio.src = await getSound("../assets/incorrect.wav");
     }
     return audio.play();
 }
@@ -193,7 +193,7 @@ function initialiseExit(questions) {
 function handleUserInfoSubmit(e) {
     e.preventDefault();
     const formData = Object.fromEntries(new FormData(this));
-    console.log(formData);
+
     const { "user-initials": userInitials } = formData;
     const user = userInitials.trim() ? userInitials : "unknown user";
     this.reset();
@@ -202,7 +202,6 @@ function handleUserInfoSubmit(e) {
 
 function saveUserData(initials, score) {
     gameInProgress = false;
-    console.log(initials, score);
     let savedScores = JSON.parse(localStorage.getItem("saved-score"));
     if (!savedScores) {
         const scoresList = [{ initials, score }];
@@ -211,7 +210,7 @@ function saveUserData(initials, score) {
         savedScores = [{ initials, score }, ...savedScores];
         localStorage.setItem("saved-score", JSON.stringify(savedScores));
     }
-    // hideSection(exitSection);
+
     displayScores();
 }
 
