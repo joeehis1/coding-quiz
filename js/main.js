@@ -142,9 +142,11 @@ async function setAnswered(id, option) {
 async function playSound(answeredCorrectly) {
     const audio = new Audio();
     if (answeredCorrectly) {
-        audio.src = "../assets/correct.wav";
+        audio.src =
+            "https://github.com/joeehis1/coding-quiz/raw/main/assets/correct.wav";
     } else {
-        audio.src = "../assets/incorrect.wav";
+        audio.src =
+            "https://github.com/joeehis1/coding-quiz/raw/main/assets/correct.wav";
     }
     return audio.play();
 }
